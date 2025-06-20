@@ -9,6 +9,7 @@ const fs = require('fs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { triggerAsyncId } = require('async_hooks');
 
 var app = express();
 
@@ -21,14 +22,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 let db;
 
+const 
+
 (async () => {
   try {
     // Connect to MySQL without specifying a database
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: '' // Set your MySQL root password
-      multiplestatements
+      password: '', // Set your MySQL root password
+      multipleStatements: true
     });
 
     // Create the database if it doesn't exist
