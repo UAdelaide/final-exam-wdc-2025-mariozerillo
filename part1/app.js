@@ -42,9 +42,9 @@ let db;
       database: 'testdb'
     });
 } catch {
-    return re
+    return;
 }
-);
+});
 
 
 app.use('/', indexRouter);
