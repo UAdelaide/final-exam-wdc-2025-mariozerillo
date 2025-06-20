@@ -1,3 +1,3 @@
 INSERT INTO Users (username, email, password_hash, role)
 VALUES
-    ('alice123', '')
+    ('alice123', 'aliceexample.com')
