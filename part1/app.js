@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 let db;
 
-const 
+const createDB = fs.readFileSync('dogwalks.sql', 'utf-8');
 
 (async () => {
   try {
