@@ -9,7 +9,6 @@ const fs = require('fs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const { triggerAsyncId } = require('async_hooks');
 
 var app = express();
 
