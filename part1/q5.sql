@@ -9,10 +9,10 @@ VALUES
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
     (SELECT user_id, 'Max', 'medium' FROM Users WHERE username = 'alice123' UNION ALL
-    (SELECT user_id, 'Bella', 'small' FROM Users WHERE username = 'carol123'),
-    (SELECT user_id, 'Scooby', 'large' FROM Users WHERE username = 'jane123'),
-    (SELECT user_id, 'Scrappy', 'medium' FROM Users WHERE username = 'carol123'),
-    (SELECT user_id, 'Buster', 'medium' FROM Users WHERE username = 'jane123');
+    SELECT user_id, 'Bella', 'small' FROM Users WHERE username = 'carol123' UNION ALL
+    SELECT user_id, 'Scooby', 'large' FROM Users WHERE username = 'jane123' UNION ALL
+    SELECT user_id, 'Scrappy', 'medium' FROM Users WHERE username = 'carol123' UNION ALL
+    SELECT user_id, 'Buster', 'medium' FROM Users WHERE username = 'jane123' UNION ALL
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES
