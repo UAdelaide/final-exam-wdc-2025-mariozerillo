@@ -8,5 +8,5 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-    (, 'Max', 'medium'),
+    (SELECT user_id, 'Max', 'medium' FROM )
     (, '')
