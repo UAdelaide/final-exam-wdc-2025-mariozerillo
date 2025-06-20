@@ -8,4 +8,5 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-    (, 'Max', 'medium')
+    (, 'Max', 'medium'),
+    (, '')
