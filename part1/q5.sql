@@ -7,7 +7,6 @@ VALUES
     ('jane123', 'jane@example.com', 'hashedDEF', 'owner');
 
 INSERT INTO Dogs (owner_id, name, size)
-VALUES
     SELECT user_id, 'Max', 'medium' FROM Users WHERE username = 'alice123' UNION ALL
     SELECT user_id, 'Bella', 'small' FROM Users WHERE username = 'carol123' UNION ALL
     SELECT user_id, 'Scooby', 'large' FROM Users WHERE username = 'jane123' UNION ALL
@@ -15,7 +14,6 @@ VALUES
     SELECT user_id, 'Buster', 'medium' FROM Users WHERE username = 'jane123';
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-VALUES
     SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' UNION ALL
     SELECT dog_id, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted' FROM Dogs WHERE name = 'Bella' UNION ALL
     SELECT dog_id, '2025-06-10 10:00:00', 15, 'Seaton', 'accepted' FROM Dogs WHERE name = 'Scooby' UNION ALL
