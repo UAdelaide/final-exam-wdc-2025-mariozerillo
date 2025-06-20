@@ -41,9 +41,7 @@ let db;
       password: '',
       database: 'testdb'
     });
-} catch {
-    return;
-}
+  } catch (error) {}
 });
 
 
