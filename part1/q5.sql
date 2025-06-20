@@ -6,4 +6,4 @@ VALUES
     ('johnsmith', 'john@example.com', 'hashedABC', 'walker'),
     ('jane123', 'jane@example.com', 'hashedDEF', 'owner');
 
-INSERT INTO Dogs ()
+INSERT INTO Dogs (name)
