@@ -42,7 +42,7 @@ let db;
       database: 'testdb'
     });
   } catch (error) {
-    return error;
+    return console.log(error);
   }
 });
 
