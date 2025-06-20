@@ -34,7 +34,7 @@ const createDB = fs.readFileSync('dogwalks.sql', 'utf-8');
     });
 
     // Create the database if it doesn't exist
-    await connection.execute(dogwalks.sql);
+    await connection.query(createDB);
     await connection.end();
 
     // Now connect to the created database
