@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 let db;
 
 const createDB = fs.readFileSync('dogwalks.sql', 'utf-8');
+const populateDB = fs.readFileSync('q5.sql', 'utf-8');
 
 (async () => {
   try {
@@ -37,7 +38,7 @@ const createDB = fs.readFileSync('dogwalks.sql', 'utf-8');
     await connection.query(createDB);
 
     await connection.query(populateDB);
-    
+
     await connection.end();
 
     // Now connect to the created database
