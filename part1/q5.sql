@@ -8,5 +8,5 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-    (SELECT user_id, 'Max', 'medium' FROM )
+    (SELECT user_id, 'Max', 'medium' FROM Users WHERE username =)
     (, '')
