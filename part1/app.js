@@ -41,7 +41,7 @@ let db;
       password: '',
       database: 'testdb'
     });
-
+);
 
 
 app.use('/', indexRouter);
