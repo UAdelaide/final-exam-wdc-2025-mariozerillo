@@ -12,7 +12,7 @@ VALUES
     SELECT user_id, 'Bella', 'small' FROM Users WHERE username = 'carol123' UNION ALL
     SELECT user_id, 'Scooby', 'large' FROM Users WHERE username = 'jane123' UNION ALL
     SELECT user_id, 'Scrappy', 'medium' FROM Users WHERE username = 'carol123' UNION ALL
-    SELECT user_id, 'Buster', 'medium' FROM Users WHERE username = 'jane123' UNION ALL
+    SELECT user_id, 'Buster', 'medium' FROM Users WHERE username = 'jane123';
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES
@@ -20,4 +20,4 @@ VALUES
     SELECT dog_id, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted' FROM Dogs WHERE name = 'Bella' UNION ALL
     SELECT dog_id, '2025-06-10 10:00:00', 15, 'Seaton', 'rejected' FROM Dogs WHERE name = 'Scooby' UNION ALL
     SELECT dog_id, '2025-06-10 10:30:00', 20, 'Fulham', 'open' FROM Dogs WHERE name = 'Scrappy' UNION ALL
-    SELECT dog_id, '2025-06-10 11:30:00', 60, 'West Lakes Shore', 'open' FROM Dogs WHERE name = 'Buster' UNION ALL
+    SELECT dog_id, '2025-06-10 11:30:00', 60, 'West Lakes Shore', 'open' FROM Dogs WHERE name = 'Buster';
