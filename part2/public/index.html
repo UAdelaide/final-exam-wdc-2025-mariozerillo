@@ -14,11 +14,14 @@
 
     <div>
       <label for="username">Username</label><Br>
+      <!-- v-model for username -->
       <input v-model="username" id="username" name="username" type="text"><br>
 
       <label for="password">Password</label><br>
+      <!-- v-model for password -->
       <input v-model="password" id="password" name="password" type="password"><br><br>
 
+      <!-- calls login method -->
       <button type="submit" @click="login">Log In</button>
     </div>
   </div>
