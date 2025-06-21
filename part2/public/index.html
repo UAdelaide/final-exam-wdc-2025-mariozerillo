@@ -27,25 +27,25 @@
 
     <!-- table to display all dogs -->
     <h1>All Registered Dogs</h1>
-    <div>
-          <table v-if="dogs">
-      <tr>
-        <th>Dog ID</th>
-        <th>Name</th>
-        <th>Size</th>
-        <th>Owner ID</th>
-        <th>Photo</th>
-      </tr>
-      <!-- row for each dog in db -->
-      <tr v-for="(dog, index) in dogs" :key="index">
-        <td>{{ dog.dog_id }}</td>
-        <td>{{ dog.name }}</td>
-        <td>{{ dog.size }}</td>
-        <td>{{ dog.owner_id }}</td>
-        <!-- access the link with the current loop index in the messages array from the api response -->
-        <td><img :src="images.message[index]" width="100px" height="100px"></td>
-      </tr>
-    </table>
+    <div style="">
+      <table v-if="dogs">
+        <tr>
+          <th>Dog ID</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Owner ID</th>
+          <th>Photo</th>
+        </tr>
+        <!-- row for each dog in db -->
+        <tr v-for="(dog, index) in dogs" :key="index">
+          <td>{{ dog.dog_id }}</td>
+          <td>{{ dog.name }}</td>
+          <td>{{ dog.size }}</td>
+          <td>{{ dog.owner_id }}</td>
+          <!-- access the link with the current loop index in the messages array from the api response -->
+          <td><img :src="images.message[index]" width="100px" height="100px"></td>
+        </tr>
+      </table>
     </div>
 
 
