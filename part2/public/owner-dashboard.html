@@ -70,6 +70,12 @@
     const { createApp, ref, onMounted } = Vue;
 
     createApp({
+      methods: {
+        async function logout() {
+          alert('clicked');
+          window.location.href = '/api/users/logout';
+        }
+      },
       setup() {
         const form = ref({
           dog_id: '',
@@ -115,11 +121,6 @@
             error.value = err.message;
             message.value = '';
           }
-        }
-
-        async function logout() {
-          alert('clicked');
-          window.location.href = '/api/users/logout';
         }
 
         onMounted(() => {
