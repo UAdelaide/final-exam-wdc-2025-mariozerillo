@@ -50,6 +50,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
+    // store user info in session
     req.session.user = {
       id: rows[0].user_id
     };
