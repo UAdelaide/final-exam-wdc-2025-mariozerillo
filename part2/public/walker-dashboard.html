@@ -75,6 +75,10 @@
           }
         }
 
+        async function logout() {
+          window.location.href = '/api/users/logout';
+        }
+
         onMounted(() => {
           loadWalkRequests();
         });
@@ -83,6 +87,7 @@
           walks,
           message,
           error,
+          logout,
           applyToWalk
         };
       }
