@@ -27,7 +27,8 @@
 
     <!-- table to display all dogs -->
     <h1>All Registered Dogs</h1>
-    <table v-if="dogs">
+    <div>
+          <table v-if="dogs">
       <tr>
         <th>Dog ID</th>
         <th>Name</th>
@@ -45,6 +46,8 @@
         <td><img :src="images.message[index]" width="100px" height="100px"></td>
       </tr>
     </table>
+    </div>
+
 
   </div>
 
