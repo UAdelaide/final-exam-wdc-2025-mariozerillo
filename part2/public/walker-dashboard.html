@@ -55,10 +55,11 @@
             error.value = err.message;
           }
         }
-        
+
         async function getCurrentUser() {
           const response = await fetch('/api/users/me');
           const data = await response.json();
+          // store the user object in user
           user.value = data;
         }
 
@@ -67,6 +68,7 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
+              // user id in request body
               body: JSON.stringify({ walker_id: user.value.id })
             });
             const result = await res.json();
