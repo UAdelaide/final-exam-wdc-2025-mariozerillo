@@ -82,7 +82,9 @@ router.get('/walkers/summary', async(req, res, next) => {
 });
 
 router.get('/fetchImage', async (req, res) => {
-    
-})
+    try {
+        
+    }
+});
 
 module.exports = router;
