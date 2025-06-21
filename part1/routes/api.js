@@ -54,7 +54,16 @@ router.get('/walkrequests/open', async(req, res, next) => {
 });
 
 router.get('/walkers/summary', async(req, res, next) => {
-
+    try {
+        let db = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
+        });
+    } catch (error) {
+        
+    }
 });
 
 module.exports = router;
