@@ -61,8 +61,10 @@ router.get('/walkers/summary', async(req, res, next) => {
             password: '',
             database: 'DogWalkService'
         });
+
+        const fetchWalkersSql = 
     } catch (error) {
-        
+        return res.status(500).json({ error: 'Internal server error.' });
     }
 });
 
