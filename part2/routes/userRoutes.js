@@ -67,8 +67,8 @@ router.get('/logout', async(req, res) => {
 });
 
 router.get('/fetchDogs', async(req, res) => {
-  fetchDogsSql = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?';
-  owner
+  const fetchDogsSql = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?';
+  const owner_id = 
 });
 
 module.exports = router;
