@@ -98,4 +98,8 @@ router.get('/dogs', async(req, res, next) => {
     }
 });
 
+router.get('/fetchImages', async(req, res) => {
+
+})
+
 module.exports = router;
