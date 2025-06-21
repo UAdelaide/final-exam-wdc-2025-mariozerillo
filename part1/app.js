@@ -54,6 +54,9 @@ const populateDB = fs.readFileSync('q5.sql', 'utf-8');
       password: '',
       database: 'DogWalkService'
     });
+
+    console.log('Connected to database');
+
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
