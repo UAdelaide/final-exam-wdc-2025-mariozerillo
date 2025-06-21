@@ -53,7 +53,7 @@
 
         <div id="right">
             <button type="button" @click="firstButtonClicked = true" v-if="!firstButtonClicked">Show dog?</button>
-            <button type="button" @click="thirdButtonClicked = true" v-if=""
+            <button type="button" @click="thirdButtonClicked = true" v-if="firstButtonClicked && secondButtonClicked && !thirdButtonClicked">Really sure?</button>
         </div>
         <div id="left">
             <button type="button" @click="secondButtonClicked = true" v-if="firstButtonClicked && !secondButtonClicked">Are you sure?</button>
