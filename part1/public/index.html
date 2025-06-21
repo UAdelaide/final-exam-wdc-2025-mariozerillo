@@ -54,7 +54,9 @@
         <div id="right">
             <button type="button" @click="firstButtonClicked = true" v-if="!firstButtonClicked">Show dog?</button>
         </div>
-        <button type="button" @click="secondButtonClicked = true" v-if="firstButtonClicked && !secondButtonClicked">Are you sure?</button>
+        <div id="left">
+            <button type="button" @click="secondButtonClicked = true" v-if="firstButtonClicked && !secondButtonClicked">Are you sure?</button>
+        </div>
 
         <div id="content">
             <p>Size: Small</p>
