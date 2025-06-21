@@ -5,7 +5,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/dogs', async(req, res, next)  {
+router.get('/dogs', async(req, res, next) => {
     try {
         let db = await mysql.createConnection({
             host: 'localhost',
@@ -13,7 +13,9 @@ router.get('/dogs', async(req, res, next)  {
             password: '',
             database: 'DogWalkService'
         });
-    }
+    } catch (error) {
+        req.
+    };
 });
 
 module.exports = router;
