@@ -137,6 +137,8 @@
             const data = await response.json();
 
             dogs.value = data;
+          } catch (err) {
+            error.value = err.message;
           }
 
         }
