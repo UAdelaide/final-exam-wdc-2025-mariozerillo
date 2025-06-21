@@ -100,7 +100,7 @@ router.get('/dogs', async(req, res, next) => {
 
 router.get('/fetchImages', async(req, res) => {
   try {
-    const countDogsSql = 'SELECT COUNT(*) FROM Dogs';
+    const countDogsSql = 'SELECT COUNT(*) AS total FROM Dogs';
     const [count] = await db.execute(countDogsSql);
 
     const response = await fetch('https://dog.ceo/api/breeds/image/random/' + count[0].total);
