@@ -65,6 +65,8 @@ router.get('/logout', async(req, res) => {
     req.session.destroy();
     res.clearCookie('connect.sid');
     res.redirect('/index.html');
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to logout' });
   }
 
 });
