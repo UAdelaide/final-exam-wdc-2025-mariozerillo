@@ -66,6 +66,8 @@ router.get('/logout', async(req, res) => {
   res.redirect('/index.html');
 });
 
-router.get('/fetchDogs')
+router.get('/fetchDogs', async(req, res) => {
+  fetchDogsSql = 'SELECT name, '
+});
 
 module.exports = router;
