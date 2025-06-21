@@ -53,6 +53,8 @@ router.get('/walkrequests/open', async(req, res, next) => {
     }
 });
 
-router.get('/walkers/summary')
+router.get('/walkers/summary', async(req, res, next) => {
+
+});
 
 module.exports = router;
