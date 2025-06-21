@@ -132,7 +132,7 @@
           const response = await fetch('/api/users/fetchDogs');
           const data = await response.json();
 
-          this.dogs = data;
+          dogs.value = data;
         }
 
         onMounted(() => {
