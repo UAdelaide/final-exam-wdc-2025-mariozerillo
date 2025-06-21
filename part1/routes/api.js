@@ -84,6 +84,8 @@ router.get('/walkers/summary', async(req, res, next) => {
 router.get('/fetchImage', async (req, res) => {
     try {
         const response = await fetch('https://dog.ceo/api/breeds/image/random');
+        const data = await response.json();
+        res.json(data);
     } catch (error) {
         return res.status(500).json({ error: 'Failed to fetch from API' });
     }
