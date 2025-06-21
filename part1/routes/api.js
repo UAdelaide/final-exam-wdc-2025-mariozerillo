@@ -19,7 +19,7 @@ router.get('/dogs', async(req, res, next) => {
 
         const [result] = db.Promise().execute(fetchDogsSql);
 
-        res.json(result);
+        return res.json(result);
 
     } catch (error) {
         return res.sendStatus(500).json('Internal server error.');
