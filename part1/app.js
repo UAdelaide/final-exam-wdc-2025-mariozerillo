@@ -34,6 +34,8 @@ const populateDB = fs.readFileSync('q5.sql', 'utf-8');
       multipleStatements: true
     });
 
+    console.log('')
+
     // Create the database if it doesn't exist
     await connection.query(createDB);
 
