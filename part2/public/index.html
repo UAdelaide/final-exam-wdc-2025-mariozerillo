@@ -25,6 +25,7 @@
       <button type="submit" @click="login">Log In</button>
     </div>
 
+    <!-- table to display all dogs -->
     <h1>All Registered Dogs</h1>
     <table v-if="dogs">
       <tr>
@@ -34,6 +35,7 @@
         <th>Owner ID</th>
         <th>Photo</th>
       </tr>
+      <!-- row for each dog in db -->
       <tr v-for="(dog, index) in dogs" :key="index">
         <td>{{ dog.dog_id }}</td>
         <td>{{ dog.name }}</td>
