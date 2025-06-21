@@ -22,7 +22,7 @@ router.get('/dogs', async(req, res, next) => {
         res.json(result);
 
     } catch (error) {
-        return res.sendStatus(500).json('Internal server error.');
+        return res.sendStatus(500).json(error: 'Internal server error.');
     }
 });
 
