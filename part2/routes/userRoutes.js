@@ -87,7 +87,7 @@ router.get('/fetchDogs', async(req, res) => {
 
 router.get('/dogs', async(req, res, next) => {
     try {
-        const fetchDogsSql = 'SELECT dog_id,';
+        const fetchDogsSql = 'SELECT dog_id, name, size, owner_id FROM Dogs';
 
         const [result] = await db.execute(fetchDogsSql);
 
