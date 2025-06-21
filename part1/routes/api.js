@@ -42,7 +42,8 @@ router.get('/walkrequests/open', async(req, res, next) => {
                 w.requested_time, w.duration_minutes, w.location,
                 (SELECT u.username FROM Users AS u JOIN Dogs AS d ON u.user_id = d.owner_id WHERE w.dog_id = d.dog_id) AS owner_username
             FROM WalkRequests AS w
-            WHERE w.status = 'open'`;
+            WHERE w.status = 'open'
+            `;
 
         const [result] = await db.execute(fetchOpenRequestsSql);
 
@@ -63,7 +64,7 @@ router.get('/walkers/summary', async(req, res, next) => {
         });
 
         const fetchWalkersSql = `
-
+        
         `;
 
         const [result] = await db.execute(fetchWalkersSql);
