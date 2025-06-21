@@ -79,6 +79,8 @@ router.get('/fetchDogs', async(req, res) => {
 
     const [rows] = await db.execute(fetchDogsSql, [owner_id]);
     res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: 'Could not fetch dogs' });
   }
 
 });
