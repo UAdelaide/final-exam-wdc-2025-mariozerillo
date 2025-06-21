@@ -67,6 +67,7 @@ router.get('/logout', async(req, res) => {
 });
 
 router.get('/fetchDogs', async(req, res) => {
+  // select all dogs for user id in session
   const fetchDogsSql = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?';
   const owner_id = req.session.user.id;
 
