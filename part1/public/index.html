@@ -26,8 +26,12 @@
         methods: {
             async fetchRandomImage() {
                 try {
-                    const response = fetch('/api/fetchImage');
-                    const data =
+                    const response = await fetch('/api/fetchImage');
+                    const data = await response.json();
+
+                } catch (error) {
+                    alert(error.message);
+                    return;
                 }
 
             }
