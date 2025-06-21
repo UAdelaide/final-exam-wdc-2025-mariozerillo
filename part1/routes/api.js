@@ -65,7 +65,8 @@ router.get('/walkers/summary', async(req, res, next) => {
 
         const fetchWalkersSql = `
             SELECT
-                w.
+                u.username AS walker_username,
+                
         `;
 
         const [result] = await db.execute(fetchWalkersSql);
