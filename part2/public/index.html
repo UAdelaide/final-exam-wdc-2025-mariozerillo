@@ -14,7 +14,9 @@
 
     <form @submit.Prevent="login()">
       <label for="username">Username</label>
-      <input v-model="username" id="username" name="username">
+      <input v-model="username" id="username" name="username" type="text">
+
+      <label for="password">Password</label>
     </form>
   </div>
 
