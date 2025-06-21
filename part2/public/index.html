@@ -88,7 +88,9 @@
         },
         async fetchDogs() {
           try {
-            const response = await fetch('/userRoutes/')
+            const response = await fetch('/api/users/dogs');
+            const data = await response.json();
+            const 
           } catch (error) {
             alert(error.message);
             return;
