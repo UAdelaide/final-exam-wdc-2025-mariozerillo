@@ -132,10 +132,13 @@
 
         // call fetch dogs endpoint and store in variable
         async function fetchDogs() {
-          const response = await fetch('/api/users/fetchDogs');
-          const data = await response.json();
+          try {
+            const response = await fetch('/api/users/fetchDogs');
+            const data = await response.json();
 
-          dogs.value = data;
+            dogs.value = data;
+          }
+
         }
 
         onMounted(() => {
