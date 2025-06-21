@@ -34,6 +34,10 @@ router.get('/walkrequests/open', async(req, res, next) => {
             password: '',
             database: 'DogWalkService'
         });
+
+        const fetchOpenRequestsSql = 'SELECT '
+
+
     } catch (error) {
         return res.status(500).json({ error: 'Internal server error.' });
     }
