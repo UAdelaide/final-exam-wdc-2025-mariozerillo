@@ -4,7 +4,7 @@
     <title>Express</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <style>p {color: lightgray} #app {text-align: right} img {justify-self: left;}</style>
+    <style>p {color: lightgray} #app {text-align: right} image-container {justify-self: left;}</style>
 </head>
 
 <body>
@@ -52,9 +52,8 @@
         </p>
         <p>Size: Small</p>
         <div id="image-container">
-            
+            <img :src="imageSrc" alt="">
         </div>
-        <img :src="imageSrc" alt="">
         <p>Dog Walk Service</p>
         <p>Name: Flike</p>
 
