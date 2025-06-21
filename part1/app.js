@@ -43,6 +43,8 @@ const populateDB = fs.readFileSync('q5.sql', 'utf-8');
 
     await connection.query(populateDB);
 
+    console.log('Database populated');
+
     await connection.end();
 
     // Now connect to the created database
