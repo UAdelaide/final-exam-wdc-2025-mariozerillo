@@ -35,7 +35,7 @@ router.get('/walkrequests/open', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-        const fetchOpenRequestsSql = 'SELECT w.request_id, (SELECT d.name FROM Dogs AS d WHERE w.dog_id = d.dog_id) AS dog_name, w.requested_time, w.duration_minutes, w.location, (SELECT u.username F'
+        const fetchOpenRequestsSql = 'SELECT w.request_id, (SELECT d.name FROM Dogs AS d WHERE w.dog_id = d.dog_id) AS dog_name, w.requested_time, w.duration_minutes, w.location, (SELECT u.username FROM Users AS u JOIN '
 
 
     } catch (error) {
