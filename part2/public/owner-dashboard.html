@@ -24,6 +24,7 @@
             <label class="form-label">Select Your Dog</label>
             <!-- select still v-model for ID -->
             <select v-model="form.dog_id">
+              <!-- display name for each dog owned by user, but value is still id-->
               <option v-for="(dog, index) in dogs" :key="index" :value="dog.dog_id">{{ dog.name }}</option>
             </select>
           </div>
