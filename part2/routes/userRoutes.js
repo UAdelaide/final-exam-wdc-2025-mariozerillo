@@ -87,14 +87,7 @@ router.get('/fetchDogs', async(req, res) => {
 
 router.get('/dogs', async(req, res, next) => {
     try {
-        let db = await mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'DogWalkService'
-        });
-
-        const fetchDogsSql = 'SELECT d.name AS dog_name, d.size, (SELECT u.username FROM Users AS u WHERE d.owner_id = u.user_id) AS owner_username FROM Dogs AS d';
+        const fetchDogsSql = 'SELECT dog_id,';
 
         const [result] = await db.execute(fetchDogsSql);
 
