@@ -71,10 +71,7 @@
 
     createApp({
       methods: {
-        async function logout() {
-          alert('clicked');
-          window.location.href = '/api/users/logout';
-        }
+
       },
       setup() {
         const form = ref({
@@ -121,6 +118,11 @@
             error.value = err.message;
             message.value = '';
           }
+        }
+
+        async function logout() {
+          alert('clicked');
+          window.location.href = '/api/users/logout';
         }
 
         onMounted(() => {
