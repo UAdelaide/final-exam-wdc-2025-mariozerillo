@@ -118,7 +118,7 @@
         }
 
         async function logout() {
-          await fetch('/api/users/logout');
+          window.location.href = '/api/users/logout'
         }
 
         onMounted(() => {
