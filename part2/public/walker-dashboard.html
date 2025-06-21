@@ -89,7 +89,11 @@
         }
 
         async function logout() {
-          window.location.href = '/api/users/logout';
+          try {
+            window.location.href = '/api/users/logout';
+          } catch (error) {
+            
+          }
         }
 
         onMounted(() => {
