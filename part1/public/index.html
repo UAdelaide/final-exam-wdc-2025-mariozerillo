@@ -28,6 +28,9 @@
                 try {
                     const response = await fetch('/api/fetchImage');
                     const data = await response.json();
+                    if (response.ok) {
+
+                    }
                     this.imageSrc = data.message;
                 } catch (error) {
                     alert(error.message);
