@@ -28,12 +28,14 @@ router.get('/dogs', async(req, res, next) => {
 
 router.get('/walkrequests/open', async(req, res, next) => {
     try {
-            let db = await mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'DogWalkService'
+        let db = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
         });
+    } catch (error) {
+        return res.status(500).json({ error: 'Internal server error.' });
     }
 });
 
