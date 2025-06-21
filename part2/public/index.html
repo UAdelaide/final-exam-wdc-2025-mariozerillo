@@ -92,7 +92,7 @@
             const data = await response.json();
             this.dogs = data;
 
-            
+            const imageResponse = await fetch('/api/users/dogImages')
           } catch (error) {
             alert(error.message);
             return;
