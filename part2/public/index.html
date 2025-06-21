@@ -35,8 +35,6 @@
       },
       methods: {
         async login() {
-          alert('clicked!');
-          console.log('a');
           const response = await fetch('/api/users/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
