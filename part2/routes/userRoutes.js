@@ -85,6 +85,7 @@ router.get('/fetchDogs', async(req, res) => {
 
 });
 
+// return all dogs, repurposed from part 1
 router.get('/dogs', async(req, res, next) => {
     try {
         const fetchDogsSql = 'SELECT dog_id, name, size, owner_id FROM Dogs';
