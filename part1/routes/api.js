@@ -46,6 +46,8 @@ router.get('/walkrequests/open', async(req, res, next) => {
 
         const [result] = await db.execute(fetchOpenRequestsSql);
 
+        res.json(result);
+
     } catch (error) {
         return res.status(500).json({ error: 'Internal server error.' });
     }
