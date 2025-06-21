@@ -100,7 +100,8 @@ router.get('/dogs', async(req, res, next) => {
 
 router.get('/fetchImages', async(req, res) => {
   try {
-    const response = 
+    const countDogsSql = 'SELECT COUNT(*) FROM Dogs';
+    const 
   }
 });
 
