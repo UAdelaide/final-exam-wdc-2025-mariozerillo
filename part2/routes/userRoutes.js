@@ -70,7 +70,7 @@ router.get('/fetchDogs', async(req, res) => {
   const fetchDogsSql = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?';
   const owner_id = req.session.user.id;
 
-  const [rows] = await db.execute(fetchDogsSql, owner_id);
+  const [rows] = await db.execute(fetchDogsSql, [owner_id)];
   res.json(rows);
 });
 
