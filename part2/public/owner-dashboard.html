@@ -127,7 +127,11 @@
         }
 
         async function logout() {
-          window.location.href = '/api/users/logout';
+          try {
+            window.location.href = '/api/users/logout';
+          } catch (err) {
+            error.value = err.message;
+          }
         }
 
         // call fetch dogs endpoint and store in variable
