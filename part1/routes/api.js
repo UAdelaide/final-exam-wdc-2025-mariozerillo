@@ -66,7 +66,7 @@ router.get('/walkers/summary', async(req, res, next) => {
         const fetchWalkersSql = `
             SELECT
                 u.username AS walker_username,
-                (SELECT COUNT(*) FROM W)
+                (SELECT COUNT(*) FROM WalkRatings as w WHERE u.user_id = w.)
         `;
 
         const [result] = await db.execute(fetchWalkersSql);
