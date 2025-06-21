@@ -83,7 +83,7 @@ router.get('/walkers/summary', async(req, res, next) => {
 
 router.get('/fetchImage', async (req, res) => {
     try {
-        
+        const response = 
     } catch (error) {
         return res.status(500).json({ error: 'Failed to fetch from API' });
     }
