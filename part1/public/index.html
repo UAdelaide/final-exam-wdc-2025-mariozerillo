@@ -9,7 +9,7 @@
 <body>
     <div id="app">
         <h1>Dog Walk Service</h1>
-        <img :src="">
+        <img :src="imageSrc" alt="">
         <h2>Name: Flike</h2>
         <p>Size: Small</p>
         <p>Owner: John</p>
@@ -20,7 +20,7 @@
         createApp({
         data() {
             return {
-
+                imageSrc: ''
             };
         },
         methods: {
