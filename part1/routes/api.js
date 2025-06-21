@@ -62,7 +62,11 @@ router.get('/walkers/summary', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-        const fetchWalkersSql = 
+        const fetchWalkersSql = `
+
+        `;
+
+        
     } catch (error) {
         return res.status(500).json({ error: 'Internal server error.' });
     }
