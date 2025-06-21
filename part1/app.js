@@ -65,5 +65,6 @@ const populateDB = fs.readFileSync('q5.sql', 'utf-8');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api', apiRouter);
 
 module.exports = app;
