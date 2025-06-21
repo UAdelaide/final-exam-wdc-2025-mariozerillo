@@ -40,10 +40,12 @@
       methods: {
         // attempts to login with form data
         async login() {
+          // call login endpoint
           const response = await fetch('/api/users/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
+              // form data as request body
               username: this.username,
               password: this.password
             })
