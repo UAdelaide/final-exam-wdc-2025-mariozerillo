@@ -12,7 +12,7 @@ app.use(session(){
     secret: 'abcdef',
     resave: false,
     saveUninitialized: false
-})
+});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
