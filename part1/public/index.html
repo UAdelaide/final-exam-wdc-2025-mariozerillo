@@ -84,13 +84,16 @@
         createApp({
         data() {
             return {
+                // source from api call
                 imageSrc: '',
+                // flags for required clicks
                 firstButtonClicked: false,
                 secondButtonClicked: false,
                 thirdButtonClicked: false
             };
         },
         methods: {
+            // 
             async fetchRandomImage() {
                 try {
                     const response = await fetch('/api/fetchImage');
