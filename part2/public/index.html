@@ -13,7 +13,8 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
     <form @submit.Prevent="login()">
-      <label for="username"></label>
+      <label for="username">Username</label>
+      <input v-model="username" id="username" name="username">
     </form>
   </div>
 
