@@ -66,7 +66,9 @@ router.get('/walkers/summary', async(req, res, next) => {
 
         `;
 
-        
+        const [result] = await db.execute(fetchWalkersSql);
+
+        res.json(result);
     } catch (error) {
         return res.status(500).json({ error: 'Internal server error.' });
     }
