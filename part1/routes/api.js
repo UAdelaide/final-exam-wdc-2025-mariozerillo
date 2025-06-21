@@ -5,8 +5,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/dogs', function(req, res, next) {
-    
+router.get('/dogs', async(req, res, next)  {
+    try {
+        let db = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
+        });
+    }
 });
 
 module.exports = router;
