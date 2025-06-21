@@ -12,7 +12,7 @@
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
-    <form @submit.prevent="login">
+    <div>
       <label for="username">Username</label><Br>
       <input v-model="username" id="username" name="username" type="text"><br>
 
@@ -20,7 +20,7 @@
       <input v-model="password" id="password" name="password" type="password"><br><br>
 
       <button type="submit" @click="login">Log In</button>
-    </form>
+    </div>
   </div>
 
   <script>
