@@ -128,6 +128,7 @@
           window.location.href = '/api/users/logout';
         }
 
+        // call fetch dogs endpoint and store in variable
         async function fetchDogs() {
           const response = await fetch('/api/users/fetchDogs');
           const data = await response.json();
