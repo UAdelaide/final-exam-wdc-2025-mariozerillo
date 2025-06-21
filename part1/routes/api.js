@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2/promise')
+var mysql = require('mysql2/promise');
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -15,7 +15,7 @@ router.get('/dogs', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-
+        
 
     } catch (error) {
         return res.sendStatus(500);
