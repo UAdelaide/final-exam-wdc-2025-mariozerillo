@@ -127,7 +127,10 @@
         }
 
         async function fetchDogs() {
-          const response = fetch('/api/users/fetchDogs')
+          const response = fetch('/api/users/fetchDogs');
+          const data = await response.json();
+
+          this.dogs = data;
 
         onMounted(() => {
           loadWalks();
