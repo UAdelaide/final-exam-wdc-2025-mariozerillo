@@ -35,7 +35,7 @@ router.get('/walkrequests/open', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-        const fetchOpenRequestsSql = 'SELECT '
+        const fetchOpenRequestsSql = 'SELECT w.'
 
 
     } catch (error) {
