@@ -15,7 +15,7 @@ router.get('/dogs', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-        const fetchDogsSql = 'SELECT d.name, d.size, (SELECT u.username FROM Users AS u WHERE d.owner_id = u.user_id) AS owner_username FROM Dogs AS d';
+        const fetchDogsSql = 'SELECT d.name AS dog_name, d.size, (SELECT u.username FROM Users AS u WHERE d.owner_id = u.user_id) AS owner_username FROM Dogs AS d';
 
         const [result] = await db.execute(fetchDogsSql);
 
