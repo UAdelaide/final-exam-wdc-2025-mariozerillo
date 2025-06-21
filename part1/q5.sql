@@ -22,4 +22,4 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
 VALUES
-    (1, 2, 1, ),
+    (1, 2, 1, 4, 'abc'),
