@@ -15,7 +15,7 @@ router.get('/dogs', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-        const fetchDogsSql = 'SELECT name, size, (SELECT ';
+        const fetchDogsSql = 'SELECT name, size, (SELECT username FROM u';
 
     } catch (error) {
         return res.sendStatus(500).json('Internal server error.');
