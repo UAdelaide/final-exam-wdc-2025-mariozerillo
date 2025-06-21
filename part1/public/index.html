@@ -59,7 +59,7 @@
             <button type="button" @click="secondButtonClicked = true" v-if="firstButtonClicked && !secondButtonClicked">Are you sure?</button>
         </div>
 
-        <div id="content" v-if="firstButtonClicked && secondButtonClicked">
+        <div id="content" v-if="firstButtonClicked && secondButtonClicked && thirdButtonClicked">
             <p>Size: Small</p>
             <div id="image-container">
                 <img :src="imageSrc" alt="">
