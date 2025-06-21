@@ -15,7 +15,7 @@ router.get('/dogs', async(req, res, next) => {
             database: 'DogWalkService'
         });
 
-        
+
 
     } catch (error) {
         return res.sendStatus(500).json('Internal server error.');
