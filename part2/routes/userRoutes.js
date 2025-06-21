@@ -103,7 +103,7 @@ router.get('/fetchImages', async(req, res) => {
     const countDogsSql = 'SELECT COUNT(*) FROM Dogs';
     const count = await db.execute(countDogsSql);
 
-    const response = await fetch('https://dog.ceo/api/breeds/image/random/5');
+    const response = await fetch('https://dog.ceo/api/breeds/image/random/' + count[0]);
     const data = await response.json();
 
     res.json(data);
