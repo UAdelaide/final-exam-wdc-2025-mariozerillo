@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(session(){
     secret: 'abcdef',
     resave: false,
-    saveUnininitalised
+    saveUninitialized: false
 })
 
 // Routes
