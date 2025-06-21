@@ -59,7 +59,7 @@
         async function getCurrentUser() {
           const response = await fetch('/api/users/me');
           const data = await response.json();
-          user.value = data.value;
+          user.value = data;
         }
 
         async function applyToWalk(requestId) {
