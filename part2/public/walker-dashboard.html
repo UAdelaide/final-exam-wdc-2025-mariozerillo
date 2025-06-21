@@ -57,10 +57,13 @@
         }
 
         async function getCurrentUser() {
-          const response = await fetch('/api/users/me');
+          try {
+            const response = await fetch('/api/users/me');
           const data = await response.json();
           // store the user object in user
           user.value = data;
+          }
+
         }
 
         async function applyToWalk(requestId) {
