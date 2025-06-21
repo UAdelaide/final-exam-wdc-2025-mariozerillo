@@ -32,11 +32,13 @@
       data() {
         return {
           message: 'Welcome to the Dog Walking Service!',
+          // stores username and password
           username: '',
           password: ''
         };
       },
       methods: {
+        // attempts to login with form data
         async login() {
           const response = await fetch('/api/users/login', {
             method: 'POST',
