@@ -66,6 +66,6 @@ router.get('/logout', async(req, res) => {
   res.redirect('/index.html');
 });
 
-router.get
+router.get('/fetchDogs')
 
 module.exports = router;
